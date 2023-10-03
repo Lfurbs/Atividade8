@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(){
     char nota;
     int lug=0, ida=0, A=0, B=0, C=0, D=0, E=0, ret=1, ida2=0, somaR=0;
     float idaPe=0.0, porcPess=0.0, idaOtimo=0.0, difIdade=0.0, porcBom=0.0, porcReg=0.0, contFim=0.0;
@@ -16,7 +16,7 @@ int main() {
             a++;
             if (ida > idaOtimo){
                 idaOtimo = ida;
-            }
+        }
         } else if (avaliacao == 'b') {
             b++;
         } else if (avaliacao == 'c') {
@@ -76,6 +76,4 @@ int main() {
     } else{
         printf("\nNão ha registro");
     }
-
-    return 0;
 }
