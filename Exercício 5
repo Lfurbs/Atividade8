@@ -1,0 +1,134 @@
+#include <stdio.h>
+
+int main(){
+    char sex;
+    int ida=0, ret=0, voto=0, australia=0, eua=0, alemanha=0, franca=0, brasil=0, numVotos=0, retInicio=0;
+
+    do
+    {
+
+        printf("Informe seu nome:");
+
+        do
+        {
+            printf("Informe sua idade:");
+            scanf("%d", &ida);
+            fflush(stdin);
+            if (ida < 12)
+            {
+                printf("Idade invalida");
+                printf("Deseja corrijir sua idade?");
+                scanf("%d", &ret);
+                if (ret < 1)
+                {
+                    return 0;
+                }
+                else
+                {
+                    ret=1;
+                }
+            }
+            else
+            {
+                break;
+            }
+        } while (ret > 0);
+
+        do
+        {
+            printf("Informe seu sexo: masculino, feminino");
+            scanf(" %c", &sex);
+            fflush(stdin);
+            if (sex != 'f' && sex != 'm')
+            {
+                printf("Sexo invalido");
+                fflush(stdin);
+                printf("Deseja corrigir seu sexo?");
+                scanf("%d", &ret);
+                if (ret < 1)
+                {
+                    return 0;
+                }
+                else
+                {
+                    ret=1;
+                }
+            }
+            else
+            {
+                break;
+            }
+
+        } while (ret > 0);
+        ret=0;
+        do
+        {
+            printf("Digite o numero do seu voto:");
+            scanf("%d", &voto);
+
+            if (voto == 1)
+            {
+                numVotos++;
+                australia++;
+            }
+            else if (voto == 2)
+            {
+                numVotos++;
+                eua++;
+            }
+            else if (voto == 3)
+            {
+                numVotos++;
+                alemanha++;
+            }
+            else if (voto == 4)
+            {
+                numVotos++;
+                franca++;
+            }
+            else if (voto == 5)
+            {
+                numVotos++;
+                brasil++;
+            }
+            else
+            {
+                printf("Valor invalido");
+                ret = 1;
+            }
+
+        } while (ret == 1);
+
+    } while (retInicio > 0);
+
+    printf("\nSam Kerr: %d dos votos", australia);
+    printf("\nAlex Morgan: %d dos votos", eua);
+    printf("\nDzsenifer: %d dos votos", alemanha);
+    printf("\nArmandine: %d dos votos", franca);
+    printf("\nMarta Vieira: %d dos votos", brasil);
+
+    if (australia > eua && australia > alemanha && australia > alemanha && australia > franca && australia > brasil)
+    {
+        printf("\nSam Kerr e a mais votada");
+    }
+    else if (eua > australia && eua > alemanha && eua > franca && eua > brasil)
+    {
+        printf("\nAlex Morgan e a mais votada");
+    }
+    else if (alemanha > australia && alemanha > eua && alemanha > franca && alemanha > brasil)
+    {
+        printf("\nDzsenifer e a mais votada");
+    }
+    else if (franca > australia && franca > eua && franca > alemanha && franca > brasil)
+    {
+        printf("\nArmandine é a mais votada");
+    }
+    else if (brasil > australia && brasil > eua && brasil > alemanha && brasil > franca)
+    {
+        printf("\nMarta é a mais votada");
+    }
+    else
+    {
+        printf("\nExistem duas ou mais jogadoras empatadas");
+    }
+}
