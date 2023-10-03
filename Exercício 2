@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main(){
+
+    char elev, peri;
+    int maxPe=0, elevA=0, elevB=0, elevC=0, ret=0, periM=0, periN=0, periV=0, periTotal;
+
+    while (maxPe <= 50)
+    {
+        do
+        {
+            printf("Qual elevador e mais utilizado? A, B ou C?");
+            scanf(" %c", &elev);
+
+            if (elev == 'a' || elev == 'b' || elev == 'c')
+            {
+                if (elev == 'a')
+                {
+                    elevA++;
+                }
+                else if (elev == 'b')
+                {
+                    elevB++;
+                }
+                else if (elev == 'c')
+                {
+                    elevC++;
+                }
+            }
+            else
+            {
+                printf("Nao ha registro");
+            }
+
+                printf("Qual o periodo de utilizacao dos elevadores? M (matutino), V(vespertino) ou N(noturno)");
+                scanf(" %c", &peri);
+
+                if (peri == 'm' || peri == 'n' || peri == 'v')
+            {
+                periTotal++;
+                if (peri == 'm')
+                {
+                    periM++;
+                }
+                if (peri == 'n')
+                {
+                    periN++;
+                }
+                if (peri == 'v')
+                {
+                    periV++;
+                }
+            }
+            else
+            {
+                printf("Periodo invalido")
+            }
+}
