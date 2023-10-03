@@ -1,0 +1,73 @@
+#include <stdio.h>
+
+int main(){
+
+    char sex, nome[30];
+    float alt=0.0, peso=0.0,alturaH=0.0,alturaMH=0.0;
+    int contador=0, ret=0, masc=0, fem=0;
+
+    while (contador <= 10)
+    {
+        printf("Informe seu nome");
+        scanf(" %c", &nome);
+        fflush(stdin);
+
+        do
+        {
+            printf("Informe seu sexo: masculino ou feminino");
+            scanf(" %c", &sex);
+            if (sex == 'm')
+            {
+                masc++;
+            }
+            else if (sex == 'f')
+            {
+                fem++;
+            }
+            else
+            {
+                printf("Sexo invalido");
+                printf("Deseja corrigir seu sexo? Sim(1) Nao(0)");
+                scanf("%d", &ret);
+            }
+
+        } while (ret > 0);
+        do
+        {
+            printf("Informe a sua altura");
+            scanf("%f", &alt);
+            if (sex = 'm')
+            {
+                alturaH += alt;
+            }
+            
+            if (alt < 0)
+            {
+                printf("Altura invalida");
+                printf("Deseja corrigir sua altura? Sim(1) Nao(0)");
+                scanf("%d", &ret);
+            }
+        } while (retorno > 0);
+        retorno = 0;
+        do
+        {
+            printf("Informe o seu peso");
+            scanf("%f", &peso);
+            if (peso < 0)
+            {
+                printf("Peso invalido");
+                printf("Deseja corrigir seu peso? Sim(1) Nao(0)");
+                scanf("d", &ret)
+            }
+
+        } while (ret > 0);
+        contador++;
+    }
+    printf("Numero de mulheres: %d", feminino);
+    printf("Numero de homens: %d", masculino);
+    if (sex == 'm')
+    {
+        alturaMH = alturaH / masc;
+    }
+    printf("A altura media entre os homens e:%0.02f", alturaMH);
+}
