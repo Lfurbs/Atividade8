@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){
+    int num, termoAnt=0, termoAtual=1, proxTermo;
+
+    printf("Informe um numero limite para a sequencia de Fibonacci:");
+    scanf("%d", &num);
+
+    if (numUsuario < 0)
+    {
+        printf("Numeros negativos nao sao validos\n");
+    }
+    else
+    {
+        while (termoAnt <= num)
+        {
+            printf("%d\n", termoAnt);
+            proxTermo = termoAnt + termoAtual;
+            termoAnt = termoAtual;
+            termoAtual = proxTermo;
+        }
+    }
+}
