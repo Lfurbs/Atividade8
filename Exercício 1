@@ -42,9 +42,6 @@ int main(){
     } else{
         printf("Não ha registro");
     }
-
-    printf("\n---------------------------------------------------------------------------");
-
     if (e > 0){
         percPess = ((float)e / lug) * 100;
         printf("\n%.2f%% Pessoas avaliaram o filme como pessimo", porcPess);
@@ -52,8 +49,6 @@ int main(){
     } else{
         printf("\nNão ha registro");
     }
-
-    printf("\n---------------------------------------------------------------------------");
     if (d > 0){
         somaR = ida2 / d;
         printf("\n%d Pessoas avaliaram o filme como pessimo", somaRuim);
@@ -65,9 +60,6 @@ int main(){
     } else{
         printf("\nInformacao incompleta ou inexistente");
     }
-
-    printf("\n---------------------------------------------------------------------------");
-
     if (c > 0 && b > 0){
         porReg = ((float)c / lug) * 100;
         porcBom = ((float)b / lugares) * 100;
