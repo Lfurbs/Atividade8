@@ -13,11 +13,11 @@ int main(){
     else
     {
         while (termoAnt <= num)
-        {
-            printf("%d\n", termoAnt);
-            proxTermo = termoAnt + termoAtual;
-            termoAnt = termoAtual;
-            termoAtual = proxTermo;
-        }
+            {
+                printf("%d\n", termoAnt);
+                proxTermo = termoAnt + termoAtual;
+                termoAnt = termoAtual;
+                termoAtual = proxTermo;
+            }
     }
 }
