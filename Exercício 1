@@ -1,0 +1,81 @@
+#include <stdio.h>
+
+int main() {
+    char nota;
+    int lug=0, ida=0, A=0, B=0, C=0, D=0, E=0, ret=1, ida2=0, somaR=0;
+    float idaPe=0.0, porcPess=0.0, idaOtimo=0.0, difIdade=0.0, porcBom=0.0, porcReg=0.0, contFim=0.0;
+
+    while (lug <= 100 && ret == 1){
+        printf("\nInforme a sua idade:");
+        scanf("%d", &ida);
+
+        printf("\nQual nota voce da para o filme? A(otimo), B(bom), C(Regular), D(Ruim), E(Péssimo). )");
+        scanf(" %c", &avalicao);
+
+        if (avaliacao == 'a'){
+            a++;
+            if (ida > idaOtimo){
+                idaOtimo = ida;
+            }
+        } else if (avaliacao == 'b') {
+            b++;
+        } else if (avaliacao == 'c') {
+            c++;
+        } else if (avalicao == 'd') {
+            d++;
+            ida2 += ida;
+        } else if (avaliacao == 'e') {
+            e++;
+            if (ida > idaPe){
+                idaPe = ida;
+            }
+        }
+
+        lug++;
+
+        printf("\nQuer chamar mais alguem? 1(sim) ou 0(nao)");
+        scanf("%d", &ret);
+    }
+
+    if (a > 0){
+        printf("\n%d Pessoas avaliaram o filme como otimo", a);
+    } else{
+        printf("Não ha registro");
+    }
+
+    printf("\n---------------------------------------------------------------------------");
+
+    if (e > 0){
+        percPess = ((float)e / lug) * 100;
+        printf("\n%.2f%% Pessoas avaliaram o filme como pessimo", porcPess);
+        printf("\nA maior idade entre as pessoas que escolheram péssimo: %.2f", idaPe);
+    } else{
+        printf("\nNão ha registro");
+    }
+
+    printf("\n---------------------------------------------------------------------------");
+    if (d > 0){
+        somaR = ida2 / d;
+        printf("\n%d Pessoas avaliaram o filme como pessimo", somaRuim);
+    }
+
+    if (idaOtimo > 0){
+        difIdade = idaOtimo - ida2;
+        printf("\nA diferença da idade de quem respondeu otimo e ruim é: %.2f", difIdade);
+    } else{
+        printf("\nInformacao incompleta ou inexistente");
+    }
+
+    printf("\n---------------------------------------------------------------------------");
+
+    if (c > 0 && b > 0){
+        porReg = ((float)c / lug) * 100;
+        porcBom = ((float)b / lugares) * 100;
+        contFim = porcBom - porcReg;
+        printf("\nA diferença percentual entre respostas bom e regular é: %.2f%%", contFim);
+    } else{
+        printf("\nNão ha registro");
+    }
+
+    return 0;
+}
